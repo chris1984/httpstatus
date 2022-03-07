@@ -3,9 +3,8 @@
 require 'bundler/setup'
 Bundler.require(:default)
 
-require File.dirname(__FILE__) + "/httpstatus.rb"
+require File.dirname(__FILE__) + '/httpstatus.rb'
 
-
-map "/" do
+map '/' do
   run HttpStatus
 end

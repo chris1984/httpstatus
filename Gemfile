@@ -6,8 +6,8 @@ source 'https://rubygems.org'
 gem 'puma'
 
 # App Framework
-gem 'sinatra'
 gem 'rack'
+gem 'sinatra'
 
 # Configuration
 gem 'dotenv'
