@@ -6,6 +6,9 @@ require 'rack'
 # Main class for the app
 class HttpStatus < Sinatra::Base
   # Information responses
+
+  foo = 'hi'
+  bar = '22'
   get '/100' do
     [100, {}, '100 Continue']
   end
