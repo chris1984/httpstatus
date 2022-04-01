@@ -1,0 +1,20 @@
+name: Assert Single Commit (non-blocking)
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  single_commit:
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+      with:
+        fetch-depth: 30
+    - name: Checkout main
+      run: git fetch origin main
+    - name: create local main branch
+      run: git branch main origin/main
+    - name: Commit Count Check
+      run: test `git log  --oneline --no-merges HEAD ^main   | wc -l ` = 1
+    runs-on: ubuntu-latest
