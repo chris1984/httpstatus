@@ -3,6 +3,9 @@
 require 'rspec'
 require 'rack/test'
 require 'response_code_matchers'
+require 'coveralls'
+Coveralls.wear!
+
 
 RSpec.configure do |conf|
   conf.include Rack::Test::Methods
