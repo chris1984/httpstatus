@@ -2,11 +2,11 @@
 
 require 'sinatra'
 require 'rack'
-require_relative './info'
-require_relative './success'
-require_relative './redirect'
-require_relative './client'
-require_relative './server'
+require './routes/info'
+require './routes/success'
+require './routes/redirect'
+require './routes/client'
+require './routes/server'
 
 # Main class for the app
 class HttpStatus < Sinatra::Base
