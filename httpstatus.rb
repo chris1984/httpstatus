@@ -10,4 +10,10 @@ require './routes/server'
 
 # Main class for the app
 class HttpStatus < Sinatra::Base
+  set :views, Proc.new { File.join(root, "../views") }
+  set :public_folder, File.expand_path('../public', __FILE__)
+
+  get '/' do
+    erb :index
+  end
 end
